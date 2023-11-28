@@ -88,5 +88,11 @@ having SUM(i."Total") > 45
 order by "total_spent" DESC;
 
 
+-- List the 3 Track names that are also names of both Albums and Artists
+select "Name" from "Track"
+intersect
+select "Title" from "Album"
+intersect
+select "Name" from "Artist";
 
 
